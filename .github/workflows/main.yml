@@ -37,6 +37,8 @@ jobs:
         run: echo Hello, world!
       - name: Run Frontend:test
         run: npm run ci:frontend:test
+      - name: Chmod + npm
+        run: chmod +x mvnw && npm run ci:backend:test
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
